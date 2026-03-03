@@ -6,75 +6,75 @@
 
 ## 📌 Project Overview
 
-This project goes beyond basic SQL analysis and treats a Spotify-style music dataset as a **digital content marketplace**.
+This project analyses a Spotify-style dataset by treating it as a **digital content marketplace**, not just a collection of songs.
 
-Instead of asking *“Which song is most popular?”*This analysis answers:
+Instead of asking *“Which song is most popular?”*The analysis explores deeper structural questions:
 
-* Is popularity concentrated among a few artists?
-* Are some genres oversupplied yet underperforming?
+* Is popularity concentrated among a small group of artists?
+* Are certain genres oversupplied yet underperforming?
 * Do collaborations statistically improve performance?
 * Does explicit content influence engagement?
-* Is there an optimal duration for hits?
-* What structural traits define the top 10% tracks?
+* Is there an optimal duration range for higher popularity?
+* What defines the structural profile of the top 10% tracks?
 
-The goal was not just querying — but **modelling the music ecosystem like a portfolio**.
+The objective was to move beyond basic aggregation and model the music ecosystem like a performance portfolio.
 
 ---
 
 ## 🧠 Analytical Framework
 
-The dataset contained:
+The dataset includes:
 
 * Track-level metadata
 * 11 separate artist columns (denormalised schema)
 * Popularity scores
 * Duration
 * Explicit flag
-* Genre & album information
+* Genre and album information
 
-To ensure analytical accuracy:
+To ensure analytical rigour:
 
-* Artist columns were normalised using `UNION ALL` to remove schema bias
-* Pareto (80/20) concentration analysis was performed
+* Artist columns were normalised using `UNION ALL` to eliminate schema bias
+* Pareto (80/20) concentration analysis was performed to measure artist dominance
 * Top 10% tracks were identified using `NTILE()` (MySQL-compatible percentile logic)
-* Pearson correlation was implemented manually (since MySQL lacks `PERCENTILE_CONT`)
+* Pearson correlation was implemented manually using the mathematical formula
 * Variance was used to measure consistency vs volatility
-* Multi-factor scoring was built to model a “Hit Profile”
+* A multi-factor scoring model was built to define a structured “Hit Profile”
 
-This ensured results were statistically meaningful, not surface-level.
+This ensured the results were statistically sound and strategically meaningful.
 
 ---
 
-## 📊 Strategic Insights Uncovered
+## 📊 Strategic Insights
 
-* Popularity is highly concentrated — a small fraction of artists drive a disproportionate share of hits.
-* Duration shows almost no linear correlation with popularity.
-* Certain genres exhibit high production volume but low per-track efficiency.
-* Collaboration influence becomes visible only after proper normalisation.
+* Popularity is highly concentrated — a small fraction of artists drive a disproportionate share of high-performing tracks.
+* Song duration shows negligible linear correlation with popularity.
+* Some genres demonstrate high production volume but lower per-track efficiency.
+* Collaboration impact becomes visible only after proper normalisation.
 * Top 10% tracks follow identifiable structural patterns.
 
-These findings shift the analysis from descriptive reporting to decision intelligence.
+These insights shift the analysis from descriptive reporting to performance intelligence.
 
 ---
 
 ## 🎯 Business Applications
 
-If applied in a real-world scenario:
+If applied in a real-world setting:
 
 **Streaming Platforms**
 
-* Identify mid-tier artists with strong consistency
-* Detect undervalued genres with scalable potential
+* Identify high-consistency artists beyond viral spikes
+* Detect scalable genre opportunities
 
 **Record Labels**
 
-* Optimise release strategies (volume vs quality trade-offs)
-* Leverage collaboration patterns strategically
+* Optimise release strategies (quality vs quantity trade-offs)
+* Evaluate collaboration effectiveness
 
-**Data Teams**
+**Data & Analytics Teams**
 
-* Understand how schema design impacts analytical truth
-* Move from aggregate reporting to structural modelling
+* Understand how schema design affects analytical accuracy
+* Move from aggregate dashboards to structural insight
 
 ---
 
@@ -83,32 +83,14 @@ If applied in a real-world scenario:
 * Advanced CTE structuring
 * Window functions (`NTILE`, cumulative sums)
 * Manual Pearson correlation implementation
-* Percentile modelling without built-in functions
-* Variance & volatility analysis
-* Pareto distribution logic
+* Percentile modelling without `PERCENTILE_CONT`
+* Variance and volatility analysis
+* Pareto concentration logic
 * Multi-factor scoring design
 
 ---
 
-## 🚀 Why This Project Stands Out
+## Author
 
-Most music data projects stop at ranking top tracks.
-
-This project:
-
-* Questions schema bias
-* Validates statistical correctness
-* Applies portfolio logic
-* Extracts decision-grade insights
-
-It demonstrates the ability to think like:
-
-* An Analyst
-* A Strategist
-* And a Data Professional
-
-Not just a SQL user.
-
-## Author:
-Abhishek Singh
-Data Analyst| Business Analyst| Business Strategist
+**Abhishek Singh**
+Data Analyst | Business Analyst | Business Strategist
